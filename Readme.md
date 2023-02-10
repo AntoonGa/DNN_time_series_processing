@@ -11,14 +11,20 @@ The training task is to reproduce denoised time-series, in addition to an approx
 After training, a series of experiments are run to evaluate performance and study possible applications of the models:
 
 -1 raw performance (denoising and regression)
+
 -2 performance vs a non-linear least-square fit (with true latent parameters as initial guesses)
+
 -3 performance for a multi-model trained DNN
+
 -4 application of the DNN to estimate initial guesses for a fit
+
 -5 an interesting discussion on hyperparamters is also done
 
 What comes out:
 1- After training, the DNN outperform least-square fit (with true latent parameters as initial guesses) in almost all cases. 
+
 2- When used as a preprocessing tool to informe least-square fit initial guesses, the outcome is always the optimal solution. This remove the need for initial guesses exploration when fitting a large number of signals.
+
 3- The DNN is able to deal with multiple models at once, which is obviously never the case for a least-square fit. This is espcially usefull in processing unknown or varying signal-models.
 
 
