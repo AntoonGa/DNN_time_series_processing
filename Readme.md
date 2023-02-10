@@ -3,10 +3,9 @@ This repo is the raw code used in the paper "Deep neural networks to recover unk
 
 ![ezcv logo](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0268439.g002)
 Architecture used in the paper: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0268439
-"The Encoder produces a reduced representation of the input noisy signals. The Encoder output is passed to the Regressor, which outputs the latent parameters’ prediction. The Encoder and Regressor outputs are passed to the Decoder, which produces a noiseless prediction of the inputs. "
 
 
-The code generate huge amount of frequency-modulated, amplitude-modulated and pure decaying sinewave. To which gaussian noise, spurious event and drifts are added.
+The code generate a huge amount of frequency-modulated, amplitude-modulated and pure decaying sinewave. To which gaussian noise, spurious events and drifts are added.
 A custom DNN architecture is then produced as a base model.
 The training task is to reproduce denoised time-series, in addition to an approximation of the latent parameters (frequency, amplitude, phase, noise level, decay rate etc).
 After training, a series of experiments are run to evaluate performance and study possible applications of the models:
@@ -41,8 +40,6 @@ Run all scripts in ./trainModels
 Run all scripts in ./experiments
 
 """
-
-
 
 
 ![ezcv logo](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0268439.g005)
